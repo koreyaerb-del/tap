@@ -176,6 +176,43 @@ section.stage{padding-block:72px 8px}
 .out .total span,.out .total strong{color:#fff}
 .note{font-size:13px;color:var(--muted);margin-top:10px}
 
+/* FORMULA KEY */
+.key{margin-top:16px;padding:24px}
+.key-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px 24px;flex-wrap:wrap;margin-bottom:14px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.src-in{background:var(--blue-wash);border:1px solid var(--blue)}
+.src-tap{background:var(--signal-wash);border:1px solid var(--signal)}
+.src-out{background:var(--bg);border:1px solid var(--muted)}
+.formulas{display:grid;overflow-x:auto}
+.f-group{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:14px 0 6px;border-bottom:1px solid var(--line)}
+.f{display:grid;grid-template-columns:28px minmax(170px,1fr) minmax(250px,1.3fr) minmax(220px,1.2fr);gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);min-width:720px}
+.f-id{font-family:var(--f-mono);font-weight:600;color:var(--blue-ink)}
+.f-name{font-weight:600;font-size:15px}
+.f code{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.f code b{font-weight:500;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.f code b.in{background:var(--blue-wash);color:var(--blue-ink)}
+.f code b.tap{background:var(--signal-wash);color:var(--signal-ink);border:1px solid var(--signal)}
+.f code b.calc{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.f-val{font-family:var(--f-mono);font-size:13.5px;font-variant-numeric:tabular-nums;text-align:right;color:var(--ink)}
+.reading{margin-top:22px}
+.reading ul{margin:10px 0 0;padding-left:18px;display:grid;gap:8px;font-size:15px}
+.reading li{color:var(--muted)}
+.reading li b{color:var(--ink)}
+
+/* PROBLEM */
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pain{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;min-width:0}
+.pain h3{font-size:17.5px}
+.pain blockquote{margin:0;padding-left:12px;border-left:2px solid var(--line);font-style:italic;color:var(--ink);font-size:15px}
+.pain p{font-size:14.5px;color:var(--muted)}
+.pain p b{color:var(--blue-ink);font-weight:600}
+.pain .on{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pain .on span{font-size:11px;letter-spacing:0;text-transform:none;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:2px 7px;color:var(--ink)}
+@media (max-width:900px){.pains{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.pains{grid-template-columns:1fr}}
+
 /* MAP */
 .map{display:grid;grid-template-columns:repeat(6,minmax(150px,1fr));gap:0;min-width:900px}
 .map div{padding:14px;border-right:1px solid var(--line)}
@@ -195,9 +232,9 @@ section.stage{padding-block:72px 8px}
 .ladder b{font-family:var(--f-display);font-size:18px;font-stretch:90%;display:block}
 .ladder p{font-size:14px;color:var(--muted);margin-top:4px}
 
-.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .plan>*{min-width:0}
-.plan .card h3{display:flex;gap:10px;align-items:baseline}
+.plan .card h3{display:flex;flex-direction:column;gap:4px}
 .plan .card h3 span{font-family:var(--f-mono);font-size:12px;color:var(--blue-ink)}
 
 .me{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px}
@@ -269,13 +306,14 @@ footer a{color:#fff}
 
 <nav class="stages" aria-label="Sales stages">
   <ol>
+    <li><a href="#problem">The problem</a></li>
     <li><a href="#target"><b>01</b>Target</a></li>
     <li><a href="#find"><b>02</b>Find</a></li>
     <li><a href="#contact"><b>03</b>Prospect &amp; contact</a></li>
     <li><a href="#discovery"><b>04</b>Discovery</a></li>
     <li><a href="#pilot"><b>05</b>Paid pilot</a></li>
     <li><a href="#close"><b>06</b>Close &amp; expand</a></li>
-    <li><a href="#plan">First 90 days</a></li>
+    <li><a href="#plan">First 120 days</a></li>
     <li><a href="#me">Why me</a></li>
   </ol>
 </nav>
@@ -304,6 +342,18 @@ footer a{color:#fff}
     </div>
   </div>
 
+  <!-- PROBLEM -->
+  <section class="stage" id="problem">
+    <div class="stage-head">
+      <div class="stage-no" aria-hidden="true">&rarr;</div>
+      <div><p class="eyebrow">The problem</p><h2>What manufacturers are struggling with in technician hiring today</h2></div>
+      <p class="lede">The people who know how to run these plants are retiring, and the people replacing them have never done the job. Every conversation I&rsquo;d have starts from one of these six problems. The quotes are illustrative of what plant and HR leaders say.</p>
+    </div>
+    <div class="pains">
+      <div class="pain"><h3>The retiring workforce and the knowledge cliff</h3><blockquote>&ldquo;Dave has run this line for 31 years and retires in March. Nobody else knows why we do half of what we do.&rdquo;</blockquote><p><b>Where Ava fits:</b> Scenarios built from what your best technicians know, so every new hire is screened against the standard they set, and training time goes to plant-specific knowledge.</p><div class="on">On my list <span>Boeing</span><span>Honeywell Aerospace</span><span>Northrop Grumman</span></div></div><div class="pain"><h3>A resume doesn&rsquo;t show skill</h3><blockquote>&ldquo;Every applicant says they can troubleshoot a conveyor. Half of them can&rsquo;t.&rdquo;</blockquote><p><b>Where Ava fits:</b> Candidates show what they know by talking through a real fault on their phone, before anyone spends an hour on an interview.</p><div class="on">On my list <span>TSMC Arizona</span><span>Panasonic Energy</span><span>Lam Research</span></div></div><div class="pain"><h3>New hires wash out of training</h3><blockquote>&ldquo;We lose a third of new techs before they finish onboarding.&rdquo;</blockquote><p><b>Where Ava fits:</b> Screening for aptitude up front means fewer training seats spent on people who leave in the first 90 days.</p><div class="on">On my list <span>Panasonic Energy</span><span>Tesla</span><span>Lucid</span></div></div><div class="pain"><h3>Recruiters buried in volume</h3><blockquote>&ldquo;Four hundred applicants a week and three recruiters.&rdquo;</blockquote><p><b>Where Ava fits:</b> Ava runs every first screen at once, around the clock, and hands recruiters a ranked shortlist in their ATS.</p><div class="on">On my list <span>Boeing</span><span>SpaceX</span><span>Tesla</span></div></div><div class="pain"><h3>New plants with no local talent pool</h3><blockquote>&ldquo;We&rsquo;re hiring 3,000 people in a town that&rsquo;s never had a fab.&rdquo;</blockquote><p><b>Where Ava fits:</b> When experienced candidates don&rsquo;t exist, you hire on aptitude. Ava measures it the same way at every site.</p><div class="on">On my list <span>Amkor</span><span>Micron</span><span>Tesla</span></div></div><div class="pain"><h3>Legal wants to know how the AI decides</h3><blockquote>&ldquo;Before any AI touches hiring, counsel needs to see how it scores people.&rdquo;</blockquote><p><b>Where Ava fits:</b> Every candidate gets the same job-based scenarios and scoring, which is what an AI-in-hiring review asks for.</p><div class="on">On my list <span>Northrop Grumman</span><span>SpaceX</span><span>Applied Materials</span></div></div>
+    </div>
+  </section>
+
   <!-- 01 TARGET -->
   <section class="stage" id="target">
     <div class="stage-head">
@@ -315,10 +365,10 @@ footer a{color:#fff}
       <table class="score">
         <thead><tr><th>Criterion</th><th>Weight</th><th>What counts as a yes</th><th>Where I look</th></tr></thead>
         <tbody>
-          <tr><td><b>Technician volume</b></td><td class="w">30%</td><td>500+ frontline or technical hires a year at one site or across a region</td><td>Careers-site posting counts, plant announcements, state incentive filings</td></tr>
+          <tr><td><b>Technician volume</b></td><td class="w">25%</td><td>500+ frontline or technical hires a year at one site or across a region</td><td>Careers-site posting counts, plant announcements, state incentive filings</td></tr>
           <tr><td><b>Live ramp</b></td><td class="w">25%</td><td>New fab, line, rate increase or plant opening in the next 18 months</td><td>CHIPS awards, press releases, local business press, earnings calls</td></tr>
           <tr><td><b>Screening pain</b></td><td class="w">20%</td><td>No-degree technician roles, high 90-day turnover, training seats wasted on mis-hires</td><td>Job descriptions, Glassdoor reviews, workforce-board and college partnerships</td></tr>
-          <tr><td><b>Door I can open</b></td><td class="w">15%</td><td>Warm path to the CHRO, TA leader or plant leader inside two hops</td><td>My network, TAP investors and customers, community-college partners</td></tr>
+          <tr><td><b>Door I can open</b></td><td class="w">20%</td><td>Warm path to the CHRO</td><td>My network, TAP investors and customers, community-college partners</td></tr>
           <tr><td><b>Buying readiness</b></td><td class="w">10%</td><td>New HR leader, ATS change, or an HR-tech budget line this fiscal year</td><td>Leadership announcements, ATS vendor case studies, LinkedIn job moves</td></tr>
         </tbody>
       </table>
@@ -488,6 +538,36 @@ Korey</pre>
           <p class="note">Sample inputs shown. Results are directional and depend on the customer&rsquo;s own baseline; the pilot exists to replace these assumptions with measured numbers.</p>
         </div>
       </div>
+
+      <div class="key card">
+        <div class="key-head">
+          <h3>How the numbers work</h3>
+          <div class="legend"><span><i class="src-in"></i>Buyer&rsquo;s input</span><span><i class="src-tap"></i>TAP published result</span><span><i class="src-out"></i>Calculated</span></div>
+        </div>
+        <div class="formulas" aria-live="polite">
+          <div class="f-group">Recruiter time</div>
+          <div class="f"><span class="f-id">A</span><span class="f-name">Screens per year</span><code><b class="in">Hires</b> &times; <b class="in">Applicants per hire</b></code><span class="f-val" id="k-a"></span></div>
+          <div class="f"><span class="f-id">B</span><span class="f-name">Recruiter hours today</span><code><b class="calc">A</b> &times; <b class="in">Minutes per screen</b> &divide; 60</code><span class="f-val" id="k-b"></span></div>
+          <div class="f"><span class="f-id">C</span><span class="f-name">Hours returned</span><code><b class="calc">B</b> &times; <b class="tap">89%</b></code><span class="f-val" id="k-c"></span></div>
+          <div class="f"><span class="f-id">D</span><span class="f-name">Screening cost avoided</span><code><b class="calc">C</b> &times; <b class="in">Recruiter cost per hour</b></code><span class="f-val" id="k-d"></span></div>
+          <div class="f-group">Early turnover</div>
+          <div class="f"><span class="f-id">E</span><span class="f-name">Early leavers today</span><code><b class="in">Hires</b> &times; <b class="in">90-day turnover</b></code><span class="f-val" id="k-e"></span></div>
+          <div class="f"><span class="f-id">F</span><span class="f-name">Early leavers avoided</span><code><b class="calc">E</b> &times; <b class="tap">16%</b></code><span class="f-val" id="k-f"></span></div>
+          <div class="f"><span class="f-id">G</span><span class="f-name">Turnover cost avoided</span><code><b class="calc">F</b> &times; <b class="in">Cost of one early leaver</b></code><span class="f-val" id="k-g"></span></div>
+          <div class="f-group">Result</div>
+          <div class="f"><span class="f-id">H</span><span class="f-name">Annual value, enterprise-wide</span><code><b class="calc">D</b> + <b class="calc">G</b></code><span class="f-val" id="k-h"></span></div>
+          <div class="f"><span class="f-id">I</span><span class="f-name">Value proven at the pilot site</span><code><b class="calc">H</b> &times; <b class="in">Pilot site share</b></code><span class="f-val" id="k-i"></span></div>
+        </div>
+        <div class="reading">
+          <h3>What this shows, and what it doesn&rsquo;t</h3>
+          <ul>
+            <li><b>Gross value, not ROI.</b> TAP&rsquo;s price is not subtracted. Net return comes after pricing is set.</li>
+            <li><b>Hours returned are capacity.</b> They become cash savings only when they reduce agency fees, overtime or planned recruiter hires.</li>
+            <li><b>TAP&rsquo;s results are applied conservatively.</b> 89% is TAP&rsquo;s published reduction in assessment time. TAP publishes a 16% retention improvement; the model reads it as 16% fewer early leavers.</li>
+            <li><b>Every other input is a sample.</b> Discovery replaces them with the customer&rsquo;s own numbers, and the pilot replaces the 89% and 16% with measured results.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -523,13 +603,14 @@ Korey</pre>
   <!-- PLAN -->
   <section class="stage" id="plan">
     <div class="stage-head">
-      <div class="stage-no" aria-hidden="true">90</div>
-      <div><p class="eyebrow">First 90 days</p><h2>What the founders should expect from me</h2></div>
+      <div class="stage-no" aria-hidden="true">120</div>
+      <div><p class="eyebrow">First 120 days</p><h2>What the founders should expect from me</h2></div>
     </div>
     <div class="plan">
       <div class="card"><h3><span>DAYS 1&ndash;30</span>Learn and build the map</h3><ul><li>Take every Ava assessment we sell; sit in on founder calls</li><li>Score the full Western list; pick 12 Tier 1 accounts</li><li>Map buying committees for all 12 and verify every contact</li><li>First warm intros through TAP&rsquo;s investors and Northrop</li></ul></div>
-      <div class="card"><h3><span>DAYS 31&ndash;60</span>Open doors</h3><ul><li>Sequences live on all Tier 1 accounts</li><li>8 or more first meetings with TA or plant leaders</li><li>3 discovery baselines completed</li><li>Security and legal packet assembled with the founders</li></ul></div>
-      <div class="card"><h3><span>DAYS 61&ndash;90</span>Land pilots</h3><ul><li>2 paid pilots in contracting</li><li>At least 1 signed Western logo</li><li>Tier 2 accounts in active sequences</li><li>A written sales playbook the next AE can run</li></ul></div>
+      <div class="card"><h3><span>DAYS 31&ndash;60</span>Start outreach</h3><ul><li>Sequences live on the first Tier 1 accounts</li><li>Warm intro requests out through investors and partners</li><li>Messaging tested and refined with the founders</li><li>Security and legal packet assembled with the founders</li></ul></div>
+      <div class="card"><h3><span>DAYS 61&ndash;90</span>Open doors</h3><ul><li>First meetings with TA or plant leaders at Tier 1 accounts</li><li>First discovery baselines captured</li><li>Sequences live on the remaining Tier 1 accounts</li><li>Tier 2 accounts researched and mapped</li></ul></div>
+      <div class="card"><h3><span>DAYS 91&ndash;120</span>Land pilots</h3><ul><li>First paid pilot scoped and in contracting</li><li>Working toward the first signed Western logo</li><li>Tier 2 accounts in active sequences</li><li>A written sales playbook the next AE can run</li></ul></div>
     </div>
   </section>
 
@@ -637,6 +718,17 @@ function calc(){
   $('o-turn').textContent=fmt(tc);
   $('o-total').textContent=fmt(total);
   $('o-pilot').textContent=fmt(total*pilot);
+  const n=x=>Math.round(x).toLocaleString('en-US');
+  const A=hires*app, B=A*min/60, E=hires*turn;
+  $('k-a').textContent=`${n(hires)} × ${n(app)} = ${n(A)} screens`;
+  $('k-b').textContent=`${n(A)} × ${n(min)} ÷ 60 = ${n(B)} hrs`;
+  $('k-c').textContent=`${n(B)} × 89% = ${n(hrs)} hrs`;
+  $('k-d').textContent=`${n(hrs)} × $${n(rate)} = ${fmt(screen)}`;
+  $('k-e').textContent=`${n(hires)} × ${Math.round(turn*100)}% = ${n(E)} people`;
+  $('k-f').textContent=`${n(E)} × 16% = ${n(left)} people`;
+  $('k-g').textContent=`${n(left)} × $${n(cost)} = ${fmt(tc)}`;
+  $('k-h').textContent=`${fmt(screen)} + ${fmt(tc)} = ${fmt(total)}`;
+  $('k-i').textContent=`${fmt(total)} × ${Math.round(pilot*100)}% = ${fmt(total*pilot)}`;
 }
 document.querySelectorAll('.inputs input').forEach(i=>i.addEventListener('input',calc));
 calc();
