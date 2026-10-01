@@ -221,6 +221,18 @@ section.stage{padding-block:72px 8px}
 .lx .arrow{font-size:28px;color:var(--blue)}
 @media (max-width:700px){.lx{grid-template-columns:1fr}.lx .arrow{transform:rotate(90deg);justify-self:center}}
 
+/* CALIFORNIA */
+.ca{margin-top:16px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--signal);border-radius:var(--r);padding:22px}
+.ca-head{display:grid;gap:8px;justify-items:start;margin-bottom:16px}
+.ca-head h3{font-size:20px}
+.ca-head p{color:var(--muted);max-width:80ch;font-size:15px}
+.ca-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:22px}
+.ca-grid>*{min-width:0}
+.ca h4{margin:0 0 8px;font:700 15px var(--f-display);font-stretch:95%;color:var(--blue-ink)}
+.ca ul,.ca ol{margin:0;padding-left:18px;display:grid;gap:8px;font-size:14px}
+.ca li b{font-weight:600}
+@media (max-width:900px){.ca-grid{grid-template-columns:1fr}}
+
 /* TERRITORY MAP */
 :root{--i-aero:#1F6FDB;--i-semi:#5B45D6;--i-ev:#0F9E76;--i-food:#EA5A3A;--i-med:#E2679B;--i-ref:#EE9D1C;--i-ind:#5F6673}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--i-aero:#4F92FF;--i-semi:#8F7FFF;--i-ev:#2FCB98;--i-food:#FF7A5C;--i-med:#F08AB6;--i-ref:#F6B848;--i-ind:#A3ACBB}}
@@ -680,6 +692,32 @@ Korey</pre>
       <div><b>Plant</b><p>Every technician role at the pilot site.</p></div>
       <div><b>Region</b><p>Sister sites in the same state or ramp.</p></div>
       <div><b>Enterprise</b><p>Standard screen across the company, synced to the ATS.</p></div>
+    </div>
+    <div class="ca">
+      <div class="ca-head"><span class="tag sig">California readiness</span><h3>California is the strictest AI-in-hiring market in the country</h3><p>Expect every California deal to route Ava through legal and HR compliance before signature. Ava&rsquo;s design (same job-based scenarios and scoring for every candidate, testing skill rather than personality) is the answer. I&rsquo;d bring it to counsel in week one.</p></div>
+      <div class="ca-grid">
+        <div><h4>The rules buyers will cite</h4><ul>
+          <li><b>AI-in-hiring regulations (since Oct 2025).</b> Skills assessments count as automated decision systems. Bias testing is weighed, records kept four years, accommodations required, and vendors can be treated as the employer&rsquo;s agent.</li>
+          <li><b>Privacy-law rules for automated decisions (Jan 2027).</b> Notice before use, opt-out or appeal rights with limited exceptions, and risk assessments.</li>
+          <li><b>New 2026 laws.</b> Human review before AI-driven discipline or firing (SB 947), and a ban on workplace AI that reads emotional states (AB 1883).</li>
+          <li><b>Long-standing rules.</b> All-party consent to record, no criminal-history or salary-history questions, no medical questions before an offer, and score content, not accent.</li>
+        </ul></div>
+        <div><h4>What California buyers will likely ask</h4><ol>
+          <li>Show us your bias testing: who did it, when, and what did it find?</li>
+          <li>What does the candidate see before the interview, and can they get a human alternative?</li>
+          <li>Where are recordings stored, for how long, and who can access them?</li>
+          <li>Does the AI decide, or does a person make the call?</li>
+          <li>Does it analyze voice, tone or emotion?</li>
+          <li>Will you sign our AI and data terms: security review, indemnity and retention?</li>
+        </ol></div>
+        <div><h4>What I&rsquo;d confirm with the TAP team</h4><ol>
+          <li>Has Ava had an independent bias audit, and can I share a summary with prospects?</li>
+          <li>Is there a text or human alternative for accommodations?</li>
+          <li>How long are recordings and scores kept, and is that configurable per customer?</li>
+          <li>Is there a California-ready candidate notice template and a data processing agreement?</li>
+        </ol></div>
+      </div>
+      <p class="note">General information, not legal advice. Each customer&rsquo;s counsel makes the final call.</p>
     </div>
     <div class="cols" style="margin-top:16px">
       <div class="card"><h3>What I bring back to the product team</h3><ul><li>Which ATS integrations each deal needs, ranked by revenue</li><li>What counsel and security asked for, so the packet gets better every deal</li><li>Which role families buyers want next</li></ul></div>
