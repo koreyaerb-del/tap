@@ -221,6 +221,42 @@ section.stage{padding-block:72px 8px}
 .lx .arrow{font-size:28px;color:var(--blue)}
 @media (max-width:700px){.lx{grid-template-columns:1fr}.lx .arrow{transform:rotate(90deg);justify-self:center}}
 
+/* MEDDICC */
+.meddicc{margin-top:28px}
+.md-head{display:grid;gap:6px;margin-bottom:16px}
+.md-head h3{font-size:24px}
+.md-head p{color:var(--muted);max-width:76ch}
+.md-head p b{color:var(--ink)}
+.md-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.md{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 16px;display:grid;align-content:start;gap:4px;min-width:0;position:relative;overflow:hidden}
+.md::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--blue)}
+.md:nth-child(1)::before,.md:nth-child(6)::before{background:var(--signal)}
+.md-l{font-family:var(--f-display);font-weight:900;font-stretch:62%;font-size:58px;line-height:.9;color:var(--blue)}
+.md:nth-child(1) .md-l,.md:nth-child(6) .md-l{color:var(--signal-ink)}
+.md-n{font-family:var(--f-display);font-weight:700;font-size:15.5px;font-stretch:92%}
+.md-w{font-size:12.5px;color:var(--muted);min-height:2.6em}
+.md dl{margin:8px 0 0;display:grid;gap:3px}
+.md dt{font:600 10px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--blue-ink);margin-top:6px}
+.md dd{margin:0;font-size:13px;line-height:1.45}
+.md-ex{margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.md-ex-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:12px}
+.md-ex-head h4{margin:0;font:700 17px var(--f-display);font-stretch:94%}
+.md-legend{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted)}
+.md-legend i{width:10px;height:10px;border-radius:50%;display:inline-block;margin-left:8px}
+.md-legend .k,.ex-known .pill{--pc:var(--good)}
+.md-legend .p,.ex-partial .pill{--pc:var(--signal)}
+.md-legend .g,.ex-gap .pill{--pc:#D9534F}
+.md-legend i{background:var(--pc)}
+.md-ex ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.md-ex li{display:grid;gap:4px;align-content:start;border-top:3px solid var(--pc,var(--line));padding-top:8px;min-width:0}
+.ex-known{--pc:var(--good)}.ex-partial{--pc:var(--signal)}.ex-gap{--pc:#D9534F}
+.ex-l{font-family:var(--f-display);font-weight:900;font-stretch:62%;font-size:28px;line-height:1;color:var(--ink)}
+.ex-n{font-size:12.5px;font-weight:600}
+.pill{justify-self:start;font:600 10.5px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px;background:color-mix(in srgb,var(--pc) 18%,transparent);color:var(--ink);border:1px solid var(--pc)}
+.ex-t{font-size:12.5px;color:var(--muted);line-height:1.4}
+@media (max-width:1060px){.md-grid,.md-ex ol{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:640px){.md-grid,.md-ex ol{grid-template-columns:repeat(2,minmax(0,1fr))}.md-legend{margin-left:0}}
+
 /* CALIFORNIA */
 .ca{margin-top:16px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--signal);border-radius:var(--r);padding:22px}
 .ca-head{display:grid;gap:8px;justify-items:start;margin-bottom:16px}
@@ -590,6 +626,21 @@ Korey</pre>
         <li>Named exec sponsor and pilot owner</li>
         <li>Written definition of pilot success</li>
       </ul>
+    </div>
+    <div class="meddicc">
+      <div class="md-head"><p class="eyebrow">How I qualify</p><h3>MEDDICC, applied to Ava</h3><p>Every Ava deal gets scored on seven letters before it goes in the forecast. Early on, two matter most: <b>Metrics</b> and <b>Champion</b>. Without a baseline and an insider who&rsquo;ll take the interview himself, the deal stays out of commit.</p></div>
+      <div class="md-grid"><div class="md"><div class="md-l">M</div><div class="md-n">Metrics</div><p class="md-w">The numbers Ava will be judged on</p>
+<dl><dt>For Ava</dt><dd>Time-to-fill, recruiter hours, 90-day turnover, cost of a bad hire</dd><dt>I ask</dt><dd>&ldquo;How many technician hires this year, and what does one early leaver cost you?&rdquo;</dd><dt>Qualified when</dt><dd>A baseline we both agree on</dd></dl></div><div class="md"><div class="md-l">E</div><div class="md-n">Economic buyer</div><p class="md-w">Who controls budget and signs</p>
+<dl><dt>For Ava</dt><dd>CHRO or VP of Talent Acquisition; sometimes a plant leader for a single site</dd><dt>I ask</dt><dd>&ldquo;Who signs a paid pilot here, and who signs the enterprise agreement?&rdquo;</dd><dt>Qualified when</dt><dd>I&rsquo;ve met them, or have a date to</dd></dl></div><div class="md"><div class="md-l">D</div><div class="md-n">Decision criteria</div><p class="md-w">What Ava has to prove</p>
+<dl><dt>For Ava</dt><dd>Scenario accuracy, phone-friendly candidate experience, ATS sync, security, bias testing, price</dd><dt>I ask</dt><dd>&ldquo;If you picked a tool tomorrow, what would it have to prove?&rdquo;</dd><dt>Qualified when</dt><dd>Criteria shaped toward technical depth and fairness</dd></dl></div><div class="md"><div class="md-l">D</div><div class="md-n">Decision process</div><p class="md-w">Every step from interested to signed</p>
+<dl><dt>For Ava</dt><dd>Discovery, demo, exec takes the interview, pilot scope, security and legal, pilot, readout, contract</dd><dt>I ask</dt><dd>&ldquo;Walk me through how you bought your last HR tool.&rdquo;</dd><dt>Qualified when</dt><dd>A dated mutual action plan</dd></dl></div><div class="md"><div class="md-l">I</div><div class="md-n">Identify pain</div><p class="md-w">Why this is urgent now</p>
+<dl><dt>For Ava</dt><dd>Plant ramp, retiring experts, resumes that hide skill, training washout</dd><dt>I ask</dt><dd>&ldquo;What happens between a technician applying and their first day on the floor?&rdquo;</dd><dt>Qualified when</dt><dd>Pain tied to a date or a dollar figure</dd></dl></div><div class="md"><div class="md-l">C</div><div class="md-n">Champion</div><p class="md-w">The insider who sells Ava without me</p>
+<dl><dt>For Ava</dt><dd>TA leader, plant or maintenance manager, or Northrop&rsquo;s training sponsor</dd><dt>I ask</dt><dd>&ldquo;Will you take the Ava interview yourself and share it with your VP?&rdquo;</dd><dt>Qualified when</dt><dd>They do it, and get me to the signer</dd></dl></div><div class="md"><div class="md-l">C</div><div class="md-n">Competition</div><p class="md-w">What else they could choose</p>
+<dl><dt>For Ava</dt><dd>Doing nothing (phone screens, agencies), HireVue, Paradox in Workday, skills tests</dd><dt>I ask</dt><dd>&ldquo;How do you check hands-on skill today?&rdquo;</dd><dt>Qualified when</dt><dd>I know the alternative and why Ava wins</dd></dl></div></div>
+      <div class="md-ex">
+        <div class="md-ex-head"><span class="tag">Worked example</span><h4>TSMC Arizona, before the first meeting</h4><span class="md-legend"><i class="k"></i>Known <i class="p"></i>Partial <i class="g"></i>Gap</span></div>
+        <ol><li class="ex-partial"><span class="ex-l">M</span><span class="ex-n">Metrics</span><span class="pill">Partial</span><span class="ex-t">Thousands of technician jobs across the fabs; baseline still needed</span></li><li class="ex-partial"><span class="ex-l">E</span><span class="ex-n">Economic buyer</span><span class="pill">Partial</span><span class="ex-t">Arizona HR lead to confirm; corporate SVP HR for enterprise</span></li><li class="ex-partial"><span class="ex-l">D</span><span class="ex-n">Decision criteria</span><span class="pill">Partial</span><span class="ex-t">Aptitude screening for no-degree roles, security, ATS fit</span></li><li class="ex-gap"><span class="ex-l">D</span><span class="ex-n">Decision process</span><span class="pill">Gap</span><span class="ex-t">Ask in the first meeting; expect corporate security review</span></li><li class="ex-known"><span class="ex-l">I</span><span class="ex-n">Identify pain</span><span class="pill">Known</span><span class="ex-t">Multi-fab ramp in a tight labor market</span></li><li class="ex-gap"><span class="ex-l">C</span><span class="ex-n">Champion</span><span class="pill">Gap</span><span class="ex-t">Target: a fab maintenance or training manager</span></li><li class="ex-known"><span class="ex-l">C</span><span class="ex-n">Competition</span><span class="pill">Known</span><span class="ex-t">Doing nothing: phone screens and staffing agencies</span></li></ol>
+      </div>
     </div>
   </section>
 
